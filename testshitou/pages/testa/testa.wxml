@@ -1,0 +1,13 @@
+<!-- 数据展示主列表 -->
+<!-- wx:for="{{mainListViewData}}"  定义循环数组名称为 mainListViewData -->
+
+<!-- wx:for-index="{{mainListViewDataIndex}}" 定义索引值的名称 mainListViewDataIndex-->
+
+<!-- wx:for-item="{{mainListViewDataItem}}"   定义索引值对应项的名称 mainListViewDataItem-->
+
+<view id="mainListView" wx:for="{{mainListViewData}}" wx:for-index="mainListViewDataIndex" wx:for-item="mainListViewDataItem">
+	<view class="mainListViewItem">
+		<view>22222</view>
+		<text class="" >{{mainListViewDataIndex}} >>{{mainListViewDataItem.message}}</text>
+	</view>
+</view>

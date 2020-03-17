@@ -1,0 +1,21 @@
+<view>
+
+
+<view>
+	我收到的评价:
+
+	<view wx:for="{{list}}" wx:key="key">
+		<view>
+					订单号:{{item.rootId}}
+		</view>
+		<view>
+			评论内容: {{item.evaluation}}
+		</view>
+	</view>
+
+</view>
+
+</view>
+<view>
+
+</view>

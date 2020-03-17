@@ -1,0 +1,42 @@
+<view class="right-cont">
+
+	<view wx:if="{{integral>=80}}">
+		<view id="squareList" class="weui-panel__bd mb_bottom" wx:for="{{squareList}}" wx:for-index="squareListIndex" wx:for-item="squareListItem">
+
+			<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+				<view class="weui-media-box_appmsg bc_white mT">
+					<view class="weui-media-box__hd img_box">
+						<button open-type="getUserInfo" wx:if="{{squareListItem.orderStatus==1}}" type='warn' bindgetuserinfo="onGotUserInfo" id="{{squareListIndex}}">
+							待接单 
+						</button>
+						<button open-type="getUserInfo" wx:else type="primary" bindgetuserinfo="onGotUserInfo" id="{{squareListIndex}}">
+							已接单
+              <!-- {{squareListIndex}}>>{{squareListItem.Numbering}} -->
+						</button>
+					</view>
+					<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+						<view class="cai_title">
+							订单编号:{{squareListItem.Numbering}}
+						</view>
+						<view class="cai_desc" data-index="{{index}}">菜名:{{squareListItem.Sorder}}</view>
+						<view class="cai_desc">姓名:{{squareListItem.Sname}}</view>
+						<view class="cai_desc">
+							电话：{{squareListItem.Sphone}}
+						</view>
+						<view class="cai_desc">
+							地址：{{squareListItem.Saddress}}
+						</view>
+						<view class="price-stepper">
+							<view class="cai_desc">总价</view>
+							<view class="cai_price" data-index="{{index}}">{{squareListItem.Smount}}元</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{integral<80}}" class='cont_count'>
+		<label class='none_tab'>积分低于80不在显示订单~~</label>
+	</view>
+
+</view>

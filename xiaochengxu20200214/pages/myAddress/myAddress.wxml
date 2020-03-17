@@ -1,0 +1,4 @@
+<!-- 我的订单 -->
+<view class='my_item' bindtap="goToMyOrder" >
+ <text>地址</text>
+</view>

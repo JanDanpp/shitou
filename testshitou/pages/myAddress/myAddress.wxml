@@ -1,0 +1,13 @@
+<view wx:if="{{address!=''}}">
+	<!-- 外层 -->
+	
+		<!-- 编号 -->
+		<view class='my_item' bindtap="myAddress">
+			<text>地址:</text>
+			<text>{{address}}</text>
+		</view>
+</view>
+<!-- 否则 -->
+<view wx:else class='cont_count'>
+	<label class='none_tab'>数据为空哦~~</label>
+</view>
